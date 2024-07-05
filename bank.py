@@ -32,7 +32,7 @@ class BankAccount:
 # Main Program to Demonstrate Usage
 
 def main():
-    # Create multiple bank account objects
+
     account1 = BankAccount("001", "James G", 1000.0)
     account2 = BankAccount("002", "Rena", 500.0)
     account3 = BankAccount("003", "James W", 200.0)
@@ -42,20 +42,14 @@ def main():
     account2.displayAccountInfo()
     account3.displayAccountInfo()
 
-    print("\nPerforming Transactions...")
-
+    
     # Perform transactions on account1
     account1.deposit(200)
     account1.withdraw(50)
-    account1.withdraw(1200)  # This should show an error for insufficient balance
-    account1.deposit(-100)   # This should show an error for negative deposit
-    account1.withdraw(-50)   # This should show an error for negative withdrawal
 
-    # Display updated account information
-    print("\nUpdated Account Information:")
+    # Display updated account information for account1
     account1.displayAccountInfo()
-    account2.displayAccountInfo()
-    account3.displayAccountInfo()
+    
 
 if __name__ == "__main__":
     main()
